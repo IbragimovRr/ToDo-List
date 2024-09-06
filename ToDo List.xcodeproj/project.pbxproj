@@ -25,6 +25,10 @@
 		44907E292C8B4D3E002D4617 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44907E282C8B4D3E002D4617 /* Model.swift */; };
 		44907E2C2C8B4D7F002D4617 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 44907E2B2C8B4D7F002D4617 /* SwiftyJSON */; };
 		44907E2E2C8B66EE002D4617 /* UD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44907E2D2C8B66EE002D4617 /* UD.swift */; };
+		44907E312C8BAEC6002D4617 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44907E302C8BAEC6002D4617 /* MainCollectionViewCell.swift */; };
+		44907E352C8BB14C002D4617 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44907E342C8BB14C002D4617 /* SF-Pro-Display-Bold.otf */; };
+		44907E372C8BB154002D4617 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44907E362C8BB154002D4617 /* SF-Pro-Display-Medium.otf */; };
+		44907E392C8BB15D002D4617 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44907E382C8BB15D002D4617 /* SF-Pro-Display-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		44907E1E2C8B48D3002D4617 /* MainModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleBuilder.swift; sourceTree = "<group>"; };
 		44907E282C8B4D3E002D4617 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		44907E2D2C8B66EE002D4617 /* UD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UD.swift; sourceTree = "<group>"; };
+		44907E302C8BAEC6002D4617 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		44907E342C8BB14C002D4617 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Bold.otf"; path = "../../../../../../Downloads/San Francisco Pro Display/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		44907E362C8BB154002D4617 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		44907E382C8BB15D002D4617 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,8 @@
 				44907DF02C8B4752002D4617 /* LaunchScreen.storyboard */,
 				44907DF32C8B4752002D4617 /* Info.plist */,
 				44907DEB2C8B4751002D4617 /* ToDo_List.xcdatamodeld */,
+				44907E322C8BB106002D4617 /* Font */,
+				44907E2F2C8BAEB0002D4617 /* CollectionViewCell */,
 			);
 			path = "ToDo List";
 			sourceTree = "<group>";
@@ -179,6 +189,24 @@
 				44907E2D2C8B66EE002D4617 /* UD.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		44907E2F2C8BAEB0002D4617 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				44907E302C8BAEC6002D4617 /* MainCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		44907E322C8BB106002D4617 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				44907E382C8BB15D002D4617 /* SF-Pro-Display-Regular.otf */,
+				44907E362C8BB154002D4617 /* SF-Pro-Display-Medium.otf */,
+				44907E342C8BB14C002D4617 /* SF-Pro-Display-Bold.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +324,10 @@
 			files = (
 				44907DEF2C8B4752002D4617 /* Assets.xcassets in Resources */,
 				44907DF22C8B4752002D4617 /* Base in Resources */,
+				44907E352C8BB14C002D4617 /* SF-Pro-Display-Bold.otf in Resources */,
 				44907DEA2C8B4751002D4617 /* Base in Resources */,
+				44907E392C8BB15D002D4617 /* SF-Pro-Display-Regular.otf in Resources */,
+				44907E372C8BB154002D4617 /* SF-Pro-Display-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +359,7 @@
 				44907E1B2C8B48BA002D4617 /* MainInteractorProtocol.swift in Sources */,
 				44907E1F2C8B48D3002D4617 /* MainModuleBuilder.swift in Sources */,
 				44907E1D2C8B48C6002D4617 /* MainRouterProtocol.swift in Sources */,
+				44907E312C8BAEC6002D4617 /* MainCollectionViewCell.swift in Sources */,
 				44907DED2C8B4751002D4617 /* ToDo_List.xcdatamodeld in Sources */,
 				44907E2E2C8B66EE002D4617 /* UD.swift in Sources */,
 				44907E172C8B4888002D4617 /* MainViewController.swift in Sources */,

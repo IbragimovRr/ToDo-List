@@ -78,7 +78,7 @@ extension MainPresenter: MainPresenterProtocol {
     
     
     func viewDidLoaded() {
-        if UD().getCurrent() == false {
+        if UD().getCurrent() == true {
             interactor.fetchTodos()
             UD().saveCurrent(bool: true)
         }else {

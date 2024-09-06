@@ -17,6 +17,7 @@ protocol MainViewProtocol: AnyObject {
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var closeLbl: UILabel!
     @IBOutlet weak var closeView: UIView!
     @IBOutlet weak var closeCount: UILabel!
@@ -26,14 +27,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var allCount: UILabel!
     @IBOutlet weak var allView: UIView!
     @IBOutlet weak var allLbl: UILabel!
-    
     @IBOutlet weak var currentDateLbl: UILabel!
     
     var presenter: MainPresenterProtocol?
+    var todos = [Todo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoaded()
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     private func clearAllFilter() {
@@ -90,15 +93,20 @@ extension MainViewController: MainViewProtocol {
     
     
     func showTodos(all: [Todo]) {
-        print(all.count)
+        todos = all
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
     func showTodos(open: [Todo]) {
-        print(open.count)
+        todos = open
+        collectionView.reloadData()
     }
     
     func showTodos(close: [Todo]) {
-        print(close.count)
+        todos = close
+        collectionView.reloadData()
     }
     
     
@@ -106,6 +114,31 @@ extension MainViewController: MainViewProtocol {
         DispatchQueue.main.async {
             self.currentDateLbl.text = currentDate
         }
+    }
+    
+}
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return todos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Main", for: indexPath) as! MainCollectionViewCell
+        cell.selectedBtn.tag = indexPath.row
+        cell.mainText.text = todos[indexPath.row].text
+        cell.selectBtn(bool: todos[indexPath.row].completed)
+        cell.selectedBtn.addTarget(self, action: #selector(selected), for: .touchUpInside)
+        return cell
+    }
+    
+    @objc func selected(sender: UIButton) {
+        if todos[sender.tag].completed {
+            todos[sender.tag].completed = false
+        }else {
+            todos[sender.tag].completed = true
+        }
+        collectionView.reloadItems(at: [IndexPath(row: sender.tag, section: 0)])
     }
     
 }

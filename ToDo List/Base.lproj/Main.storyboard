@@ -19,41 +19,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pIG-jN-44J">
-                                <rect key="frame" x="25" y="64" width="162.33333333333334" height="54"/>
+                                <rect key="frame" x="25" y="64" width="135.33333333333334" height="53.333333333333343"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo's Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-Qx-qnB">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.33333333333334" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Todo's Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ab-Qx-qnB">
+                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, 11 May" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu4-Gf-hTr">
-                                        <rect key="frame" x="0.0" y="33" width="162.33333333333334" height="21"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday, 11 May" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu4-Gf-hTr">
+                                        <rect key="frame" x="0.0" y="33.666666666666671" width="135.33333333333334" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                         <color key="textColor" name="BlackGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS4-jw-cfQ">
-                                <rect key="frame" x="256.33333333333331" y="74" width="111.66666666666669" height="34"/>
+                                <rect key="frame" x="263" y="74" width="105" height="33.333333333333343"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="+  New Task">
-                                            <attributes>
-                                                <font key="NSFont" size="16" name="SFProText-Regular"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="tinted" title="+  New Task">
+                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0mM-Sj-cFl">
-                                <rect key="frame" x="25" y="138" width="193.66666666666666" height="15"/>
+                                <rect key="frame" x="25" y="147.33333333333334" width="193.66666666666666" height="15"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBy-fc-OlG">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="15"/>
@@ -81,12 +74,12 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8C-YA-khy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8C-YA-khy">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="wqQ-bw-lj2"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
                                                 <color key="textColor" name="MainBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -149,9 +142,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4za-YU-e2q">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4za-YU-e2q">
                                                 <rect key="frame" x="0.0" y="0.0" width="34.666666666666664" height="15"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
                                                 <color key="textColor" name="BlackGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -204,9 +197,9 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="7"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-nR-0Uv">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-nR-0Uv">
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="15"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
                                                 <color key="textColor" name="BlackGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -236,23 +229,91 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Wn-b1-mGA">
-                                <rect key="frame" x="25" y="173" width="343" height="645"/>
+                                <rect key="frame" x="25" y="192.33333333333331" width="343" height="659.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HLn-Ib-pqa">
-                                    <size key="itemSize" width="343" height="127"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HLn-Ib-pqa">
+                                    <size key="itemSize" width="343" height="110"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tR4-rm-jGZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="127"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Main" id="tR4-rm-jGZ" customClass="MainCollectionViewCell" customModule="ToDo_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6yJ-CX-0hA">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="127"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="363-nA-n6T">
+                                                    <rect key="frame" x="20" y="15.000000000000004" width="259" height="42.333333333333343"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo's Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3O-Qk-VDm">
+                                                            <rect key="frame" x="0.0" y="0.0" width="259" height="21.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Wallet Redesign" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-gr-Wxz">
+                                                            <rect key="frame" x="0.0" y="26.666666666666668" width="259" height="15.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="13"/>
+                                                            <color key="textColor" red="0.70517676767676774" green="0.70517676767676774" blue="0.70517676767676774" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-Aq-G7f">
+                                                    <rect key="frame" x="299" y="20" width="24" height="24"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="OWN-Fm-JWL"/>
+                                                        <constraint firstAttribute="height" constant="24" id="VJh-ZL-kT2"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="MainBlue"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="12"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnC-ro-Rh9">
+                                                    <rect key="frame" x="20" y="67.333333333333329" width="303" height="1"/>
+                                                    <color key="backgroundColor" name="BlackGray"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="6FN-Qi-baY"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today 10.00 PM - 11.45 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAP-3J-LXe">
+                                                    <rect key="frame" x="20" y="78.333333333333329" width="303" height="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
+                                                    <color key="textColor" name="BlackGray"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="XAP-3J-LXe" firstAttribute="top" secondItem="ZnC-ro-Rh9" secondAttribute="bottom" constant="10" id="5NF-hn-okC"/>
+                                                <constraint firstItem="363-nA-n6T" firstAttribute="top" secondItem="6yJ-CX-0hA" secondAttribute="top" constant="15" id="9nA-Hw-CcX"/>
+                                                <constraint firstItem="363-nA-n6T" firstAttribute="leading" secondItem="6yJ-CX-0hA" secondAttribute="leading" constant="20" id="DpE-tb-OyX"/>
+                                                <constraint firstItem="ZnC-ro-Rh9" firstAttribute="leading" secondItem="6yJ-CX-0hA" secondAttribute="leading" constant="20" id="HiJ-gp-tAO"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZnC-ro-Rh9" secondAttribute="trailing" constant="20" id="MAW-Ta-t6q"/>
+                                                <constraint firstItem="Pt6-Aq-G7f" firstAttribute="top" secondItem="6yJ-CX-0hA" secondAttribute="top" constant="20" id="TSb-yb-r7X"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pt6-Aq-G7f" secondAttribute="trailing" constant="20" id="WP9-fY-MLn"/>
+                                                <constraint firstAttribute="trailing" secondItem="XAP-3J-LXe" secondAttribute="trailing" constant="20" id="gfs-9Q-n0G"/>
+                                                <constraint firstItem="ZnC-ro-Rh9" firstAttribute="top" secondItem="363-nA-n6T" secondAttribute="bottom" constant="10" id="k8f-8L-SzZ"/>
+                                                <constraint firstItem="Pt6-Aq-G7f" firstAttribute="leading" secondItem="363-nA-n6T" secondAttribute="trailing" constant="20" id="vTK-Cl-bO1"/>
+                                                <constraint firstItem="XAP-3J-LXe" firstAttribute="leading" secondItem="6yJ-CX-0hA" secondAttribute="leading" constant="20" id="zav-fX-HOc"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                            </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="343" height="127"/>
+                                        <connections>
+                                            <outlet property="date" destination="XAP-3J-LXe" id="RCA-0v-x8L"/>
+                                            <outlet property="descripionText" destination="Jeq-gr-Wxz" id="ZzC-GR-q3R"/>
+                                            <outlet property="mainText" destination="J3O-Qk-VDm" id="JFN-b3-PP7"/>
+                                            <outlet property="selectedBtn" destination="Pt6-Aq-G7f" id="GRL-K9-ftq"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -260,17 +321,17 @@
                         <viewLayoutGuide key="safeArea" id="XlU-dn-JIL"/>
                         <color key="backgroundColor" name="MainGray"/>
                         <constraints>
-                            <constraint firstItem="XlU-dn-JIL" firstAttribute="bottom" secondItem="8Wn-b1-mGA" secondAttribute="bottom" id="8ru-Pu-qBf"/>
+                            <constraint firstAttribute="bottom" secondItem="8Wn-b1-mGA" secondAttribute="bottom" id="8ru-Pu-qBf"/>
                             <constraint firstItem="pIG-jN-44J" firstAttribute="top" secondItem="XlU-dn-JIL" secondAttribute="top" constant="5" id="Off-oF-x5Z"/>
                             <constraint firstItem="8Wn-b1-mGA" firstAttribute="leading" secondItem="XlU-dn-JIL" secondAttribute="leading" constant="25" id="PFK-pK-HbR"/>
                             <constraint firstItem="aS4-jw-cfQ" firstAttribute="bottom" secondItem="pIG-jN-44J" secondAttribute="bottom" constant="-10" id="alQ-PA-OBL"/>
                             <constraint firstItem="aS4-jw-cfQ" firstAttribute="top" secondItem="pIG-jN-44J" secondAttribute="top" constant="10" id="eO8-An-9gD"/>
                             <constraint firstItem="XlU-dn-JIL" firstAttribute="trailing" secondItem="8Wn-b1-mGA" secondAttribute="trailing" constant="25" id="feq-YA-XFM"/>
-                            <constraint firstItem="0mM-Sj-cFl" firstAttribute="top" secondItem="pIG-jN-44J" secondAttribute="bottom" constant="20" id="hMa-z0-dTT"/>
+                            <constraint firstItem="0mM-Sj-cFl" firstAttribute="top" secondItem="pIG-jN-44J" secondAttribute="bottom" constant="30" id="hMa-z0-dTT"/>
                             <constraint firstItem="pIG-jN-44J" firstAttribute="leading" secondItem="XlU-dn-JIL" secondAttribute="leading" constant="25" id="ogd-p1-4XQ"/>
                             <constraint firstItem="0mM-Sj-cFl" firstAttribute="leading" secondItem="XlU-dn-JIL" secondAttribute="leading" constant="25" id="src-yz-1pI"/>
                             <constraint firstItem="XlU-dn-JIL" firstAttribute="trailing" secondItem="aS4-jw-cfQ" secondAttribute="trailing" constant="25" id="wE3-u8-qYT"/>
-                            <constraint firstItem="8Wn-b1-mGA" firstAttribute="top" secondItem="0mM-Sj-cFl" secondAttribute="bottom" constant="20" id="ztM-YS-V3v"/>
+                            <constraint firstItem="8Wn-b1-mGA" firstAttribute="top" secondItem="0mM-Sj-cFl" secondAttribute="bottom" constant="30" id="ztM-YS-V3v"/>
                         </constraints>
                     </view>
                     <connections>
@@ -280,6 +341,7 @@
                         <outlet property="closeCount" destination="XVx-Qg-Iew" id="E5H-0b-2uO"/>
                         <outlet property="closeLbl" destination="YG8-nR-0Uv" id="GRO-em-FKA"/>
                         <outlet property="closeView" destination="DQm-Bk-5AL" id="cn9-7g-uPe"/>
+                        <outlet property="collectionView" destination="8Wn-b1-mGA" id="0vj-dv-cem"/>
                         <outlet property="currentDateLbl" destination="fu4-Gf-hTr" id="efH-eY-dmu"/>
                         <outlet property="openCount" destination="DCD-et-R1X" id="K2h-ib-kCS"/>
                         <outlet property="openLbl" destination="4za-YU-e2q" id="3eH-EE-ekP"/>

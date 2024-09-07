@@ -6,14 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MainPresenterProtocol: AnyObject {
     func viewDidLoaded()
-    func didLoad(todos: [Todo])
+    func didLoad(todos: [TodoStruct])
     func didDate(date: String)
     func clickOpen()
     func clickClose()
     func clickAll()
+    func createTodo(text: String, description: String)
+    func completedTodo(bool: Bool, id: Int)
+    func changeTodo(todoStruct: TodoStruct)
 }
 
 class MainPresenter {
@@ -21,16 +25,16 @@ class MainPresenter {
     var interactor: MainInteractorProtocol
     var router: MainRouterProtocol
     
-    private var todos = [Todo]()
+    private var todos = [TodoStruct]()
     
     init(interactor: MainInteractorProtocol, router: MainRouterProtocol) {
         self.interactor = interactor
         self.router = router
     }
     
-    private func getCloseTodos() -> [Todo] {
-        var closeTodos = [Todo]()
-        guard todos.isEmpty == false else { return [Todo]() }
+    private func getCloseTodos() -> [TodoStruct] {
+        var closeTodos = [TodoStruct]()
+        guard todos.isEmpty == false else { return [TodoStruct]() }
         for x in 0...todos.count - 1 {
             if todos[x].completed == true {
                 closeTodos.append(todos[x])
@@ -39,9 +43,9 @@ class MainPresenter {
         return closeTodos
     }
     
-    private func getOpenTodos() -> [Todo] {
-        var openTodos = [Todo]()
-        guard todos.isEmpty == false else { return [Todo]() }
+    private func getOpenTodos() -> [TodoStruct] {
+        var openTodos = [TodoStruct]()
+        guard todos.isEmpty == false else { return [TodoStruct]() }
         for x in 0...todos.count - 1 {
             if todos[x].completed == false {
                 openTodos.append(todos[x])
@@ -52,6 +56,24 @@ class MainPresenter {
     
 }
 extension MainPresenter: MainPresenterProtocol {
+    
+    // MARK: - Добавить
+    
+    func createTodo(text: String, description: String) {
+        interactor.createTodo(text: text, description: description)
+    }
+    
+    // MARK: - Изменить
+    
+    func changeTodo(todoStruct: TodoStruct) {
+        interactor.changeTodo(todoStruct: todoStruct)
+    }
+    
+    func completedTodo(bool: Bool, id: Int) {
+        interactor.changeCompleted(bool: bool, id: id)
+    }
+    
+    // MARK: - Получить
     
     func clickAll() {
         view?.showTodos(all: todos)
@@ -70,7 +92,7 @@ extension MainPresenter: MainPresenterProtocol {
     }
     
     
-    func didLoad(todos: [Todo]) {
+    func didLoad(todos: [TodoStruct]) {
         self.todos = todos
         view?.showTodos(all: todos)
         view?.showCountTodos(all: todos.count , open: getOpenTodos().count, close: getCloseTodos().count)
@@ -78,11 +100,11 @@ extension MainPresenter: MainPresenterProtocol {
     
     
     func viewDidLoaded() {
-        if UD().getCurrent() == true {
+        if UD().getCurrent() == false {
             interactor.fetchTodos()
             UD().saveCurrent(bool: true)
         }else {
-            // CoreData
+            interactor.fetchTodosCoreData()
         }
         interactor.fetchCurrentData()
     }
